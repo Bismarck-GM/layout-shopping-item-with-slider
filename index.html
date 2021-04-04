@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Shopping Card - With Slider</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:wght@300;400&family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/shopping-card.css">
+  </head>
+  <body class="flex-center">
+    <div class="shop-item-card">
+      <div class="card-grid">
+        <div class="card-left flex-column space-between">
+          <div class="image-container">
+            <img src="./images/image-25.png" alt="Nuvo Armchair">
+          </div>
+          <div class="slider-controls flex-center">
+            <button class="slider-btn"><</button>
+            <button class="slider-btn">></button>
+          </div>
+        </div>
+        <div class="card-right flex-column space-between">
+          <div class="right-top">
+            <h3>Nuvo Armchair</h3>
+            <div class="description-container">
+              <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="right-bottom">
+            <div class="color-picker-panel flex" id="color-picker-panel">
+              <button class="color-picker-btn"></button>
+              <button class="color-picker-btn"></button>
+              <button class="color-picker-btn active"></button>
+              <button class="color-picker-btn"></button>
+            </div>
+            <div class="price-action flex space-between">
+              <p class="price-tag">$1,599</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const colorPanel = document.getElementById('color-picker-panel');
+      colorPanel.addEventListener('click', (e) => {
+          e.target.classList.toggle('active');
+        });
+    </script>
+  </body>
+</html>
